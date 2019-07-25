@@ -1,0 +1,286 @@
+    /***
+    Author: Antje Sommer
+    Version: 1.0
+    Date: 06.08.2013
+    Title: Antje Sommer Online Portfolio
+    Features: responsive and css valide;
+    ***/
+
+    /*
+    * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+    * http://cssreset.com
+    */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    }
+ 
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    display: block;
+    }
+    body {
+    line-height: 1;
+    }
+    ol, ul {
+    list-style: none;
+    }
+    blockquote, q {
+    quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    content: '';
+    content: none;
+    }
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+/**responsive headsupgrid**/
+/*******webfont********/
+
+@font-face{ font-family: 'cabin-regular'; 
+src: url('../font/cabin-regular-webfont.eot');
+src: url('../font/cabin-regular-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../font/cabin-regular-webfont.woff') format('woff'), 
+     url('../font/cabin-regular-webfont.ttf') format('truetype'), 
+     url('../font/cabin-regular-webfont.svg#webfont') format('svg'); }
+@font-face{ font-family: 'cabin-italic'; 
+src: url('../font/cabin-italic-webfont.eot');
+src: url('../font/cabin-italic-webfont.eot?#iefix') format('embedded-opentype'),
+     url('../font/cabin-italic-webfont.woff') format('woff'), 
+     url('../font/cabin-italic-webfont.ttf') format('truetype'), 
+     url('../font/cabin-italic-webfont.svg#webfont') format('svg'); }
+/*******webfont ende*********/
+body{ margin:0; padding:0; background-color:#F3F3F3; font-family:  Arial, Helvetica, sans-serif; text-align:left; color:#6c6c6c;}
+h1{margin:3.5em  0em 2em; font-family: 'Playball', cursive;font-size:85px; font-weight: 700;  color: #000; line-height:1.1em; text-align:left;  }
+span.decoration{ font-family: 'Playball', cursive; color:#6c6c6c; text-shadow:none; }
+span.font{ font-family: 'Playball', cursive; color:#6c6c6c; }
+#shuffle{height:75px; color:#000; }
+#shuffle li{ position: absolute;}
+
+h2 {margin:1em 0 .3em 0; padding:0; font-family:Arial,sans-serif; font-weight:bold; font-size:27px; line-height:100%; text-align:center;}
+
+a{text-decoration: none; outline: none; text-indent: -99999px;}
+
+/**portfolio css**/
+#wrapper{overflow:hidden; width:960px; margin:45px auto;}
+div.page{width:960px; margin:35px auto 0 auto; padding:0;}
+
+/**global**/
+header{margin:0em 0 3em 0; padding:0; width:100%; height:50px;}
+#logo_holder{float:left; width:62px;height:48px;}
+#logo_holder a{text-decoration: none; outline: none; text-indent: -99999px}
+
+#nav_wrapper{float:right;  margin-top:0.8em;}
+#nav_wrapper > span {position:relative;  float:right; width:32px; height:32px;}
+#nav{list-style-type: none; margin-top: 0.5em;}
+#nav li{position: relative; float:left; margin-left: 30px; display: inline;}
+#nav li a{text-decoration:none; outline:none; text-indent: -99999px; color:#6c6c6c; font-family: Arial, Helvetica, sans-serif; font-size:.9em; text-transform: uppercase;}
+#nav li a:hover{ text-decoration: line-through; color:#6c6c6c}
+#nav li a.active{text-decoration: line-through; color:#6c6c6c}
+
+
+.olive, .xing{ margin:0 auto ; text-align: center; height:auto; }
+.olive{margin:0 auto ; text-align: center; height:auto;}
+.olive figure,.xing figure{height: auto; margin: 0 auto;}
+.olive figure  img{height: 32px; width:32px; margin: 0 auto 1% auto;}
+.olive figcaption a { text-transform: uppercase; font-size: .85em; font-family: Arial, Helvetica, sans-serif; color:#6c6c6c; }
+.olive figcaption a:hover{ text-decoration: line-through; color:#6c6c6c}
+.olive figcaption, .xing figcaption{ text-transform: uppercase; text-align: center; font-size: .85em; font-family: Arial, Helvetica, sans-serif; color:#6c6c6c;}
+
+
+
+span.skills{color:#6c6c6c;  font-family: Arial, Helvetica, sans-serif;text-transform: uppercase; cursor:pointer; margin-right:0.3em;}
+span.hover{color:#6c6c6c}
+span.skillsText{opacity: 0.01; text-align: center; font-size: .8em; font-family: Arial, Helvetica, sans-serif; color:#6c6c6c ;}
+span.about{color:#000; text-transform: uppercase;}
+span.line-through{text-decoration: line-through; font-family: Arial, Helvetica, sans-serif;}
+span.captionFont{text-align: center; font-size: 1.0em; font-family: Arial, Helvetica, sans-serif; color:#6c6c6c; text-transform:uppercase;}
+span.description{margin-top: 2%; display:block;  font-size:.9em; font-family: Arial, Helvetica, sans-serif; color:#000;}
+span.project_description{margin-top: 2%; display:block;  font-size:.9em; font-family: Arial, Helvetica, sans-serif; color:#6c6c6c;}
+.text_right{float: left; font-size: .9em; line-height: 1.35em; margin: 0.5% 1% 3.3% 1.4%; width: 300px; font-family: Arial, Helvetica, sans-serif;}
+
+/**global Ende **/
+/**Startseite Inhalt**/
+.thumb_work{width:930px;}
+.maincontent{width:100%; max-width:100%; margin:10em auto 5em auto; position: relative; overflow: hidden;}
+
+ul.thumb_work{width:100%; max-width:100%;   list-style-type: none; position: relative; overflow: hidden;}
+ul.thumb_work li{margin: 13px; float: left;}
+ul.thumb_work li figure{margin: 0 auto 8%; padding:0 0 5px 0;}
+
+/**figure inhalt**/
+ul.thumb_work li figure > a img {margin: 0 auto 1em auto; cursor:pointer;  height: auto; max-width:100%; width:100%; -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; box-shadow: 0 8px 6px -6px black;}
+ul.thumb_work li figure figcaption{text-align: left; line-height:1.0em;}
+
+ul.thumb_work li figure a{text-decoration: none; outline:none;}
+ul.thumb_work li figcaption{margin: 5px 0 0px 0; color:#6c6c6c;}
+/**Startseite Inhalt Ende**/
+
+/**Contact**/
+#wrap { margin: 3em auto; width: 600px; overflow: hidden;}
+form {padding: 0; margin: 0 auto; width:100%; max-width:100%;}
+table {margin: 0 auto;  width:100%; max-width:100%;}
+tr, td, input, textarea {margin: 0;  padding: 0;}
+
+td {padding: 0 0 12px;}
+tr td:first-child { width:60px; padding-right: 15px; text-transform: uppercase;  padding-top:10px; text-align: right; vertical-align: top;}
+.error[generated=true] {color: #dc0000; font-size: 16px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family: Arial, Helvetica, sans-serif;}
+tr.error td {padding: 0;}
+input, textarea {margin-bottom:10px; background: #fff; margin-top: 10px;  font: inherit; font-size: 16px; line-height: 29px; min-height: 30px; padding: 5px 10px; width:95%; }
+input:focus, textarea:focus {outline: none;}
+
+input[type=submit] { background-color:#000;color: #fff; cursor:pointer; font: inherit; padding: 5px 10px;  border:none; width: auto; text-transform: uppercase; font-family: Arial, Helvetica, sans-serif;}
+input[type=submit]:hover{text-decoration: line-through;}
+#response {margin-bottom: 20px; text-align: center;}
+#response .success {color: #000; font-size: 21px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family: 'cabin-bold', georgia,'times new roman';}
+#response .failure {color: #dc0000; font-size: 21px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family: 'cabin-regular', georgia,'times new roman';}
+/******Contact Ende******/
+
+footer{ margin: 0 auto; padding:5px; width: 100%;  height:50px; text-align:center;}
+footer figure{margin: 0 auto; width:auto;}
+footer figure img{height: auto; margin: 0 auto; padding-right: 1%;}
+footer figure figcaption {padding-top:30px; margin: 0 auto; text-align: center; font-size: .7em; font-family: Arial, Helvetica, sans-serif; text-transform: uppercase; }
+footer figure figcaption a {text-decoration: none; color: #6c6c6c;}
+footer figure figcaption a:hover{text-decoration: line-through;}
+/*******projekte******/
+.projekt_intro{width:100%; max-width:100%; margin:7em auto 3em auto; position: relative; overflow: hidden;}
+.project{width:100%; height:auto; margin-bottom: 80px;}
+.project ul{width:100%;  height:auto;}
+.project li {width:95%; margin: 15px auto 20px; display:block;}
+.project li figure img{width:100%; height:auto; margin: 50px auto 25px; display:block; -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; box-shadow: 0 8px 6px -6px black;}
+/****projekte_ende****/
+
+
+/************ Media Query Adjustments *************/
+/*base css default 980px desktop*/
+@media screen and (min-width:1001px) {
+   #wrapper{width:960px; margin:35px auto; padding: 5px}
+   div.page{margin:0 auto 0 auto; width:100%;}
+   .maincontent{width:100%; margin:10em auto 5em auto; position: relative; overflow: hidden;}
+   ul.thumb_work{width:100%;  list-style-type: none; position: relative; overflow: hidden; margin-bottom: 2%}
+   ul.thumb_work li{margin: 10px; float: left;}
+   ul.thumb_work li figure{margin: 0 auto;  padding:0 0 5px 0;}
+   .text_right{float: left; font-size: .95em; line-height: 1.5em; margin: 0.5% 1% 3.3% 1.4%; width: 300px; font-family: Arial, Helvetica, sans-serif;}
+   footer{ margin: 0 auto; padding:5px; width: 100%;  height:50px; text-align:center;}
+   /*responsive contactform*/
+   #response .success {color: #000; font-size: 21px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family:Arial, Helvetica, sans-serif;}
+   #response .failure {color: #dc0000; font-size: 21px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family: Arial, Helvetica, sans-serif;}
+   tr td:first-child{font-size:.8em; width:60px;}
+   input, textarea{padding: 0; margin: 0 auto; width:95%;}
+   /*******projekte******/
+   .project{width:100%; height:auto; margin-bottom: 80px;}
+   .project ul{width:100%;  height:auto;}
+   .project li {width:95%; margin: 15px auto;display:block;}
+   .project li figure img{width:100%; height:auto; margin:  50px auto 25px; display:block; -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; box-shadow: 0 8px 6px -6px black;}
+   /****projekte_ende****/
+}
+/*landscape tablets*/
+@media screen and (max-width:1000px) {
+    #wrapper{width:94%; margin:35px auto .5em auto;}
+    div.page {margin:0 auto 0 auto; width:100%; }
+    .maincontent{max-width:100% ; margin:10em auto 8em auto; position: relative; overflow: hidden;}
+    ul.thumb_work{width:100%;  list-style-type: none; position: relative; overflow: hidden; margin-bottom: 2%}
+    ul.thumb_work li{margin: 10px; float: left; width: 31% }
+    ul.thumb_work li figure{margin: 0 auto;  padding:0 0 5px 0;}
+    ul.thumb_work li figure a img{width:100%; display:block; margin: 0 auto 10%;}
+    .text_right{float: left; font-size: .95em; line-height: 1.5em; margin: 0.5% 1% 3.3% 1.4%; width: 300px; font-family: Arial, Helvetica, sans-serif;}
+    footer{ margin: 0 auto; padding:5px; width: 100%;  height:50px; text-align:center;}
+    /*responsive contactform*/
+    #response .success {color: #000; font-size: 21px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family: 'cabin-bold', georgia,'times new roman';}
+    #response .failure {color: #dc0000; font-size: 21px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family: 'cabin-regular', georgia,'times new roman';}
+    tr td:first-child{font-size:.8em; width:60px;}
+    input, textarea{padding: 0; margin: 0 auto; width:95%;}
+    /*******projekte******/
+   .project{width:100%; height:auto; margin-bottom: 80px;}
+   .project ul{width:100%;  height:auto;}
+   .project li {width:95%; margin: 15px auto;display:block;}
+   .project li figure img{width:100%; height:auto; margin:  50px auto 25px; display:block; -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; box-shadow: 0 8px 6px -6px black;}
+    /****projekte_ende****/
+}
+
+@media screen and (min-width: 769px) {
+    ul.thumb_work li{margin: 10px; float: left; width: 30.5% }
+    .text_right{float: left; font-size: .95em; line-height: 1.5em; margin: 0.5% 1% 3.3% 1.4%; width: 30%; font-family: 'cabin-regular',georgia,'times new roman';}
+    footer{ margin: 0 auto; padding:5px; width: 100%;  height:50px; text-align:center;}
+    /*responsive contactform*/
+    #response .success {color: #000; font-size: 21px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family: 'cabin-bold', georgia,'times new roman';}
+    #response .failure {color: #dc0000; font-size: 21px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family: 'cabin-regular', georgia,'times new roman';}
+    tr td:first-child{font-size:.8em; width:60px;}
+    input, textarea{padding: 0; margin: 0 auto; width:95%;}
+    /*******projekte******/
+   .project{width:100%; height:auto; margin-bottom: 80px;}
+   .project ul{width:100%;  height:auto;}
+   .project li {width:95%; margin: 15px auto;display:block;}
+   .project li figure img{width:100%; height:auto; margin:  50px auto 25px; display:block; -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; box-shadow: 0 8px 6px -6px black;}
+    /****projekte_ende****/
+}
+
+/*portrait tablets and mini*/
+@media screen and (max-width:768px) {
+    #wrapper{ width:96%; margin:35px  auto;}
+    div.page { width:96%; margin:0  auto;}
+    #nav_wrapper{margin-top:3em ; margin-bottom:4em; width:100%;}
+    h1 {font-size:280%; margin:2em  auto 4em; max-width: 100%; padding: 0.5em;}
+    #nav ul {margin-bottom:2%; margin-left:0.2%; width:110%; float: right;  position: relative; }
+    #nav li{position: relative; width: 100%; padding: 10px; height:auto;  text-align: center; margin-left:0; margin-bottom: 3% }
+    #nav li a{text-transform:uppercase; outline:none; text-indent: -99999px; color:#6c6c6c; font-family: 'cabin-italic', georgia,'times new roman'; font-size:1em;}
+    #nav_wrapper > span {position:relative;  width:100%; text-align: center; height:10px; }
+    #nav_wrapper > span > img{visibility:hidden;}
+    .olive, .xing{margin: 0 auto; text-align: center; height:auto;}
+    ul.thumb_work li{margin: 0px; float: none; width: 100%}
+    ul.thumb_work{max-width:70%; margin:0 auto;}
+    ul.thumb_work li figure{ margin:0 auto 8%;}
+    ul.thumb_work li figure a img{width:100%; max-width:100%; display:block;}
+    ul.thumb_work li figure figcaption{text-align: left}
+    .text_right{float: left; font-size: 1em; line-height: 1.5em; margin: 1% 0.5% 10% 17%; width: 70%; font-family: 'cabin-regular',georgia,'times new roman';}
+    footer{ margin: 0 auto; width: 95%;  height:50px; text-align:center;}
+    /*responsive contactform*/
+    
+    .error[generated=true] {font-size:.8em;}
+    
+    #response .success {color: #000; font-size: 21px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family: 'cabin-bold', georgia,'times new roman';}
+    #response .failure {color: #dc0000; font-size: 21px; padding: 5px 0 2px 5px; text-transform: uppercase; font-family: 'cabin-regular', georgia,'times new roman';}
+    #contactform{max-width:80%; margin:0 auto; overflow: hidden}
+    tr td:first-child{font-size:.8em; width:60px;}
+    input, textarea{padding: 0; margin: 0 auto; width:95%;}
+    /*******projekte******/
+    .project{width:100%;height:auto; margin-bottom: 80px;}
+    .project ul{width:100%;  height:auto;}
+    .project li {width:95%; margin: 15px auto;display:block;}
+    .project li figure img{width:100%; height:auto; margin:  50px auto 25px; display:block; -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; box-shadow: 0 8px 6px -6px black;}
+    /****projekte_ende****/
+}
+@media (min-width:1px)and (max-width:320px) {
+    div.page {margin:0 auto 0 auto;}
+    footer{ margin: 0 auto; width: 95%;  height:50px; text-align:center;}
+    tr td:first-child{font-size:.7em; width:60px;}
+    input, textarea{padding: 0; margin: 0 auto; width:95%;}
+    /*******projekte******/
+    .project{width:100%; height:auto; margin-bottom: 80px;}
+    .project ul{width:100%;  height:auto;}
+    .project li {width:95%; margin: 15px auto;display:block;}
+    .project li figure img{width:100%; height:auto; margin:  50px auto 25px; display:block; -webkit-box-shadow: 0 8px 6px -6px black; -moz-box-shadow: 0 8px 6px -6px black; box-shadow: 0 8px 6px -6px black;}
+    /****projekte_ende****/
+}
+
+
